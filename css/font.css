@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'elektra_light_proregular';
+    src: url('../font/elektra_light_pro-webfont.eot');
+    src: url('../font/elektra_light_pro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/elektra_light_pro-webfont.woff2') format('woff2'),
+         url('../font/elektra_light_pro-webfont.woff') format('woff'),
+         url('../font/elektra_light_pro-webfont.ttf') format('truetype'),
+         url('../font/elektra_light_pro-webfont.svg#elektra_light_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'elektra_light_probold';
+    src: url('../font/font-webfont.eot');
+    src: url('../font/font-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/font-webfont.woff2') format('woff2'),
+         url('../font/font-webfont.woff') format('woff'),
+         url('../font/font-webfont.ttf') format('truetype'),
+         url('../font/font-webfont.svg#elektra_light_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'elektra_medium_proregular';
+    src: url('../font/elektra_medium_pro-webfont.eot');
+    src: url('../font/elektra_medium_pro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/elektra_medium_pro-webfont.woff2') format('woff2'),
+         url('../font/elektra_medium_pro-webfont.woff') format('woff'),
+         url('../font/elektra_medium_pro-webfont.ttf') format('truetype'),
+         url('../font/elektra_medium_pro-webfont.svg#elektra_medium_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'elektra_medium_proitalic';
+    src: url('../font/elektra_medium_pro_italic-webfont.eot');
+    src: url('../font/elektra_medium_pro_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/elektra_medium_pro_italic-webfont.woff2') format('woff2'),
+         url('../font/elektra_medium_pro_italic-webfont.woff') format('woff'),
+         url('../font/elektra_medium_pro_italic-webfont.ttf') format('truetype'),
+         url('../font/elektra_medium_pro_italic-webfont.svg#elektra_medium_proitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

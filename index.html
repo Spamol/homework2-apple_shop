@@ -6,37 +6,119 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Apple Store</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/font.css">
+        <link rel="stylesheet" href="css/style.min.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. пожалуйста <a href="http://browsehappy.com/">обновите его</a>!</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div class="wrap">
+            <aside>
+                <div class="logo"><a href="/"><img src="img/logo.jpg" alt="На главную!"></a></div>
+                <div class="formaBlock">
+                    <div class="titleForma">Заказать звонок</div>
+                    <form action="">
+                        <div class="wrapInput">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" name="name" placeholder="Константин">
+                        </div>
+                        <div class="wrapInput">
+                            <label for="telefon">Телефон</label>
+                            <input type="text" name="telefon" placeholder="+7 (912) 000-00-00">
+                        </div>
+                        <div class="wrapSelect">
+                            <label for="day">Дата звонка</label>
+                            <div class="selectOuter">
+                                <select name="day">
+                                    <option value="01" selected>01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                                <a class="select-button"></a>
+                            </div>
+                           <div class="selectOuter">
+                               <select name="mouth">
+                                    <option value="01" selected>01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                               </select>
+                               <a class="select-button"></a>
+                           </div>
+                        </div>
+                        <textarea name="comment" placeholder="Комментарий"></textarea>
+                        <input type="submit" value="Отправить">
+                        <input type="reset" value="Очистить">
+                    </form>
+                </div>
+                <div class="picsBlock">
+                    <ul>
+                        <li><a href="#"><img src="img/thumb/01.jpg" alt="pic1"></a></li>
+                        <li><a href="#"><img src="img/thumb/02.jpg" alt="pic2"></a></li>
+                        <li><a href="#"><img src="img/thumb/03.jpg" alt="pic3"></a></li>
+                        <li><a href="#"><img src="img/thumb/04.jpg" alt="pic4"></a></li>
+                        <li><a href="#"><img src="img/thumb/05.jpg" alt="pic5"></a></li>
+                        <li><a href="#"><img src="img/thumb/06.jpg" alt="pic6"></a></li>
+                        <li><a href="#"><img src="img/thumb/07.jpg" alt="pic7"></a></li>
+                        <li><a href="#"><img src="img/thumb/08.jpg" alt="pic8"></a></li>
+                        <li><a href="#"><img src="img/thumb/09.jpg" alt="pic9"></a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="contentCol">
+                <div class="slider"></div>
+            </div>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
     </body>
 </html>
