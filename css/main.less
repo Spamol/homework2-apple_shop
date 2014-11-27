@@ -276,6 +276,11 @@ aside{
 						font-size: 18px;
 						a{
 							color:@blueColor;
+							.transLink(color);
+							&:hover{
+								text-decoration: none;
+								color: #b5b5b5;
+							}
 						}
 					}
 					p{
@@ -453,6 +458,12 @@ aside{
 			}
 			&:hover{
 				z-index: 1001;
+			}
+		}
+		a{
+			color: @blueColor;
+			&:hover{
+				text-decoration: none;
 			}
 		}
 	}
