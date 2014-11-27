@@ -1,0 +1,191 @@
+/* Created Spamol */
+.clearFloat {
+  zoom: 1;
+  /* Хак для IE 6 и 7 */
+}
+.clearFloat:before,
+.clearFloat:after {
+  content: "";
+  display: table;
+}
+.clearFloat:after {
+  clear: both;
+}
+html {
+  min-height: 100%;
+  min-width: 100%;
+}
+body {
+  background: #fff;
+  font-family: 'elektra_light_proregular';
+  font-size: 1em;
+  color: #5c7b98;
+}
+.wrap {
+  width: 1000px;
+  margin: 38px auto 0;
+  zoom: 1;
+  /* Хак для IE 6 и 7 */
+}
+.wrap:before,
+.wrap:after {
+  content: "";
+  display: table;
+}
+.wrap:after {
+  clear: both;
+}
+aside {
+  float: left;
+  width: 230px;
+}
+aside .logo {
+  margin-bottom: 15px;
+}
+aside .formaBlock {
+  background: #f4f6f9;
+  padding: 14px 10px;
+  margin-bottom: 15px;
+}
+aside .formaBlock .titleForma {
+  text-align: center;
+  font-size: 25px;
+  font-family: 'elektra_light_probold';
+  margin-bottom: 17px;
+}
+aside .formaBlock input::-webkit-input-placeholder,
+aside .formaBlock input::-moz-placeholder,
+aside .formaBlock textarea::-webkit-input-placeholder,
+aside .formaBlock textarea::-moz-placeholder {
+  color: #dae1eb;
+}
+aside .formaBlock .wrapInput {
+  margin-bottom: 13px;
+  zoom: 1;
+  /* Хак для IE 6 и 7 */
+}
+aside .formaBlock .wrapInput:before,
+aside .formaBlock .wrapInput:after {
+  content: "";
+  display: table;
+}
+aside .formaBlock .wrapInput:after {
+  clear: both;
+}
+aside .formaBlock .wrapInput label {
+  font-size: 14px;
+  position: relative;
+  top: 3px;
+}
+aside .formaBlock .wrapInput input {
+  width: 122px;
+  height: 24px;
+  padding-left: 8px;
+  float: right;
+  border: 1px solid #dae1eb;
+  font-family: 'elektra_light_proregular';
+  font-size: 12px;
+  color: #5c7b98;
+}
+aside .formaBlock .wrapSelect {
+  margin: -7px 0 18px;
+}
+aside .formaBlock .wrapSelect label {
+  font-size: 14px;
+}
+aside .formaBlock .wrapSelect select {
+  width: 70px;
+  border: none;
+  height: 22px;
+  line-height: 22px;
+  position: relative;
+  background: none;
+  z-index: 100;
+  font-size: 12px;
+  color: #5c7b98;
+  font-family: 'elektra_light_proregular';
+}
+aside .formaBlock .wrapSelect .selectOuter {
+  border: 1px solid #dae1eb;
+  background: #fff;
+  width: 49px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  top: 7px;
+  margin-left: 7px;
+}
+aside .formaBlock .wrapSelect .select-button {
+  background: url('../img/selectBtn.jpg') center center no-repeat;
+  height: 24px;
+  width: 25px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 50;
+}
+aside .formaBlock textarea {
+  color: #5c7b98;
+  border: 1px solid #dae1eb;
+  font-size: 12px;
+  resize: none;
+  width: 188px;
+  height: 43px;
+  padding: 12px 10px;
+}
+aside .formaBlock input[type=submit],
+aside .formaBlock input[type=reset] {
+  padding: 9px 4px 7px 6px;
+  background: #00b9fe;
+  color: #fff;
+  font-family: 'elektra_light_proregular';
+  border: none;
+  margin-top: 15px;
+  outline: none;
+  transition: background 0.15s ease-in-out;
+}
+aside .formaBlock input[type=submit]:hover,
+aside .formaBlock input[type=reset]:hover,
+aside .formaBlock input[type=submit]:hover,
+aside .formaBlock input[type=reset]:hover {
+  background: #02a9e7;
+}
+aside .formaBlock input[type=submit]:active,
+aside .formaBlock input[type=reset]:active,
+aside .formaBlock input[type=submit]:active,
+aside .formaBlock input[type=reset]:active {
+  padding: 10px 4px 6px 6px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+aside .formaBlock input[type=reset] {
+  background: #dae1eb;
+  float: right;
+}
+aside .formaBlock input[type=reset]:hover {
+  background: #bec4cc;
+}
+aside .picsBlock ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+aside .picsBlock ul li {
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin: 0 0 10px 10px;
+}
+aside .picsBlock ul li:nth-child(3n+1) {
+  clear: left;
+  margin-left: 0;
+}
+.contentCol {
+  float: left;
+  width: 740px;
+  margin-left: 30px;
+}
+.contentCol .slider {
+  background: grey;
+  height: 300px;
+}

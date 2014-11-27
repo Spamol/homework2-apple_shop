@@ -7,27 +7,42 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Apple Store</title>
-        <meta name="description" content="">
+        <meta name="description" content="seo here">
+        <meta name="keywords" content="seo here"/>
+        <meta name="author" content="Spamol"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <!-- Standard iPhone, iPod touch -->
+        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57.png" />
+        <!-- Retina iPhone, iPod touch -->
+        <link rel="apple-touch-icon" sizes="114x114" href="img/img/apple-touch-icon-114.png" />
+        <!-- Standard iPad -->
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72.png" />
+        <!-- Retina iPad -->
+        <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144.png" />
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/font.css">
-        <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/jscrollpane.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. пожалуйста <a href="http://browsehappy.com/">обновите его</a>!</p>
         <![endif]-->
-
+        <!--[if gte IE 9]>
+          <style type="text/css">
+            .gradient {
+               filter: none;
+            }
+          </style>
+        <![endif]-->
         <div class="wrap">
             <aside>
                 <div class="logo"><a href="/"><img src="img/logo.jpg" alt="На главную!"></a></div>
                 <div class="formaBlock">
                     <div class="titleForma">Заказать звонок</div>
-                    <form action="">
+                    <form class="formaCall" action="feedback.php" method="post">
                         <div class="wrapInput">
                             <label for="name">Ваше имя</label>
                             <input type="text" name="name" placeholder="Константин">
@@ -38,62 +53,68 @@
                         </div>
                         <div class="wrapSelect">
                             <label for="day">Дата звонка</label>
-                            <div class="selectOuter">
-                                <select name="day">
-                                    <option value="01" selected>01</option>
-                                    <option value="02">02</option>
-                                    <option value="03">03</option>
-                                    <option value="04">04</option>
-                                    <option value="05">05</option>
-                                    <option value="06">06</option>
-                                    <option value="07">07</option>
-                                    <option value="08">08</option>
-                                    <option value="09">09</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                    <option value="13">13</option>
-                                    <option value="14">14</option>
-                                    <option value="15">15</option>
-                                    <option value="16">16</option>
-                                    <option value="17">17</option>
-                                    <option value="18">18</option>
-                                    <option value="19">19</option>
-                                    <option value="20">20</option>
-                                    <option value="21">21</option>
-                                    <option value="22">22</option>
-                                    <option value="23">23</option>
-                                    <option value="24">24</option>
-                                    <option value="25">25</option>
-                                    <option value="26">26</option>
-                                    <option value="27">27</option>
-                                    <option value="28">28</option>
-                                    <option value="29">29</option>
-                                    <option value="30">30</option>
-                                    <option value="31">31</option>
-                                </select>
-                                <a class="select-button"></a>
+                            <div class="selectOuterWrap" style="float:right;">
+                                <div class="selectOuter">
+                                    <input type="text" name="day" class="daySelect" placeholder="01">
+                                    <a  href="#" class="select-button"></a>
+                                    <div class="hideInput"></div>
+                                    <ul class="scroll-pane">
+                                        <li><a href="#">01</a></li>
+                                        <li><a href="#">02</a></li>
+                                        <li><a href="#">03</a></li>
+                                        <li><a href="#">04</a></li>
+                                        <li><a href="#">05</a></li>
+                                        <li><a href="#">06</a></li>
+                                        <li><a href="#">07</a></li>
+                                        <li><a href="#">08</a></li>
+                                        <li><a href="#">09</a></li>
+                                        <li><a href="#">10</a></li>
+                                        <li><a href="#">11</a></li>
+                                        <li><a href="#">12</a></li>
+                                        <li><a href="#">13</a></li>
+                                        <li><a href="#">14</a></li>
+                                        <li><a href="#">15</a></li>
+                                        <li><a href="#">16</a></li>
+                                        <li><a href="#">17</a></li>
+                                        <li><a href="#">18</a></li>
+                                        <li><a href="#">19</a></li>
+                                        <li><a href="#">20</a></li>
+                                        <li><a href="#">21</a></li>
+                                        <li><a href="#">22</a></li>
+                                        <li><a href="#">23</a></li>
+                                        <li><a href="#">24</a></li>
+                                        <li><a href="#">25</a></li>
+                                        <li><a href="#">26</a></li>
+                                        <li><a href="#">27</a></li>
+                                        <li><a href="#">28</a></li>
+                                        <li><a href="#">29</a></li>
+                                        <li><a href="#">30</a></li>
+                                        <li><a href="#">31</a></li>
+                                    </ul>
+                                </div>
+                                <div class="selectOuter">
+                                   <input type="text" name="mouth" class="mouthSelect" placeholder="11">
+                                   <a href="#" class="select-button"></a>
+                                   <div class="hideInput"></div>
+                                   <ul class="scroll-pane">
+                                        <li><a href="#">01</a></li>
+                                        <li><a href="#">02</a></li>
+                                        <li><a href="#">03</a></li>
+                                        <li><a href="#">04</a></li>
+                                        <li><a href="#">05</a></li>
+                                        <li><a href="#">06</a></li>
+                                        <li><a href="#">07</a></li>
+                                        <li><a href="#">08</a></li>
+                                        <li><a href="#">09</a></li>
+                                        <li><a href="#">10</a></li>
+                                        <li><a href="#">11</a></li>
+                                        <li><a href="#">12</a></li>
+                                    </ul>
+                               </div>
                             </div>
-                           <div class="selectOuter">
-                               <select name="mouth">
-                                    <option value="01" selected>01</option>
-                                    <option value="02">02</option>
-                                    <option value="03">03</option>
-                                    <option value="04">04</option>
-                                    <option value="05">05</option>
-                                    <option value="06">06</option>
-                                    <option value="07">07</option>
-                                    <option value="08">08</option>
-                                    <option value="09">09</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                               </select>
-                               <a class="select-button"></a>
-                           </div>
                         </div>
                         <textarea name="comment" placeholder="Комментарий"></textarea>
-                        <input type="submit" value="Отправить">
+                        <input type="submit" id="submitForm" value="Отправить">
                         <input type="reset" value="Очистить">
                     </form>
                 </div>
@@ -110,15 +131,355 @@
                         <li><a href="#"><img src="img/thumb/09.jpg" alt="pic9"></a></li>
                     </ul>
                 </div>
+                <div class="contactBlock">
+                    <div class="address">г. Москва, ул. Новая 246, офис 214.</div>
+                    <div class="telefon">+7(921) 322-12-32</div>
+                </div>
             </aside>
             <div class="contentCol">
-                <div class="slider"></div>
+                <div class="slider">
+                    <div class="sliderWrap">
+                        <div class="slide">
+                            <img src="img/slider/01.jpg" alt="первый слайд">
+                            <div class="legend">
+                                <div class="titleSlide"><a href="#">iMac за пол цены</a></div>
+                                <p>Прини свой старый Mac  и получи скидку на новый!</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="img/slider/02.jpg" alt="второй слайд">
+                            <div class="legend">
+                                <div class="titleSlide"><a href="#">До 31 декабря, iPhone 4 за 9900 руб.</a></div>
+                                <p>Нет денег на шестой iPhone? Купи себе четвертый!</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="img/slider/03.jpg" alt="третий слайд">
+                            <div class="legend">
+                                <div class="titleSlide"><a href="#">Конкурс на концепт IPhone 7</a></div>
+                                <p>Выйграй iPad Air за самый необычный  и интереный дизайн нового iPhone 7.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" id="prev" class="bntSlider">Пред.</a>
+                    <a href="#" id="next" class="bntSlider">След.</a>
+                </div>
+                <section>
+                    <h1><span>Популярные товары</span></h1>
+                    <ul>
+                        <li>
+                            <div class="innerProduct">
+                                <div class="headProduct">
+                                    <div class="photoProduct">
+                                        <img src="img/products/apple-display.jpg" alt="Apple Display">
+                                    </div>
+                                    <div class="titleProduct">
+                                        <a href="#">Apple Thunderb Display 27"</a>
+                                    </div>
+                                </div>
+                                <div class="charactProduct">
+                                    <div>
+                                        <p>Артикул</p>
+                                        <p class="rightFloat">42787825</p>
+                                    </div>
+                                    <div>
+                                        <p>Опция</p>
+                                        <p class="rightFloat">включена</p>
+                                    </div>
+                                    <div>
+                                        <p>Цвет</p>
+                                        <p class="rightFloat">серебристый</p>
+                                    </div>
+                                    <div>
+                                        <p>Размер</p>
+                                        <p class="rightFloat">1280*1245*90</p>
+                                    </div>
+                                    <div>
+                                        <p>Вес</p>
+                                        <p class="rightFloat">9 кг</p>
+                                    </div>
+                                </div>
+                                <p class="gradient"></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="innerProduct">
+                                <div class="headProduct">
+                                    <div class="photoProduct">
+                                        <img src="img/products/imac.jpg" alt="iMac 27">
+                                    </div>
+                                    <div class="titleProduct">
+                                        <a href="#">iMac 27"</a>
+                                    </div>
+                                </div>
+                                <div class="charactProduct">
+                                    <div>
+                                        <p>Артикул</p>
+                                        <p class="rightFloat">42787825</p>
+                                    </div>
+                                    <div>
+                                        <p>Опция</p>
+                                        <p class="rightFloat">включена</p>
+                                    </div>
+                                    <div>
+                                        <p>Цвет</p>
+                                        <p class="rightFloat">серебристый</p>
+                                    </div>
+                                    <div>
+                                        <p>Размер</p>
+                                        <p class="rightFloat">1280*1245*90</p>
+                                    </div>
+                                    <div>
+                                        <p>Вес</p>
+                                        <p class="rightFloat">9 кг</p>
+                                    </div>
+                                    <div>
+                                        <p>Цветность</p>
+                                        <p class="rightFloat">Цветной</p>
+                                    </div>
+                                    <div>
+                                        <p>Пиксельность</p>
+                                        <p class="rightFloat">Вам хватит</p>
+                                    </div>
+                                    <div>
+                                        <p>Процессор</p>
+                                        <p class="rightFloat">Абалденный</p>
+                                    </div>
+                                    <div>
+                                        <p>Зернистость</p>
+                                        <p class="rightFloat">Никакой</p>
+                                    </div>
+                                    <div>
+                                        <p>Мышь, клава</p>
+                                        <p class="rightFloat">В комплекте</p>
+                                    </div>
+                                    <div>
+                                        <p>Гарантия</p>
+                                        <p class="rightFloat">315 лет</p>
+                                    </div>
+                                </div>
+                                <p class="gradient"></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="innerProduct">
+                                <div class="headProduct">
+                                    <div class="photoProduct">
+                                        <img src="img/products/iphone5s.jpg" alt="iPhone 5s">
+                                    </div>
+                                    <div class="titleProduct">
+                                        <a href="#">iPhone 5s Gold</a>
+                                    </div>
+                                </div>
+                                <div class="charactProduct">
+                                    <div>
+                                        <p>Артикул</p>
+                                        <p class="rightFloat">42787825</p>
+                                    </div>
+                                    <div>
+                                        <p>Опция</p>
+                                        <p class="rightFloat">включена</p>
+                                    </div>
+                                    <div>
+                                        <p>Цвет</p>
+                                        <p class="rightFloat">серебристый</p>
+                                    </div>
+                                    <div>
+                                        <p>Размер</p>
+                                        <p class="rightFloat">1280*1245*90</p>
+                                    </div>
+                                    <div>
+                                        <p>Вес</p>
+                                        <p class="rightFloat">9 кг</p>
+                                    </div>
+                                </div>
+                                <p class="gradient"></p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1><span>Товары со скидкой</span></h1>
+                    <ul>
+                        <li>
+                            <div class="innerProduct">
+                                <div class="headProduct">
+                                    <div class="photoProduct">
+                                        <img src="img/products/ipad.jpg" alt="iPad Air Wi-Fi 128GB">
+                                    </div>
+                                    <div class="titleProduct">
+                                        <a href="#">iPad Air Wi-Fi 128GB - Silver</a>
+                                    </div>
+                                </div>
+                                <div class="charactProduct">
+                                    <div>
+                                        <p>Артикул</p>
+                                        <p class="rightFloat">42787825</p>
+                                    </div>
+                                    <div>
+                                        <p>Опция</p>
+                                        <p class="rightFloat">включена</p>
+                                    </div>
+                                    <div>
+                                        <p>Цвет</p>
+                                        <p class="rightFloat">серебристый</p>
+                                    </div>
+                                    <div>
+                                        <p>Размер</p>
+                                        <p class="rightFloat">1280*1245*90</p>
+                                    </div>
+                                    <div>
+                                        <p>Вес</p>
+                                        <p class="rightFloat">9 кг</p>
+                                    </div>
+                                    <div>
+                                        <p>Емкость</p>
+                                        <p class="rightFloat">128Гб</p>
+                                    </div>
+                                    <div>
+                                        <p>ОС</p>
+                                        <p class="rightFloat">iOS 8.0.2</p>
+                                    </div>
+                                    <div>
+                                        <p>Комплект</p>
+                                        <p class="rightFloat">Аппарат и коробка</p>
+                                    </div>
+                                </div>
+                                <p class="gradient"></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="innerProduct">
+                                <div class="headProduct">
+                                    <div class="photoProduct">
+                                        <img src="img/products/ipod.jpg" alt="Apple iPod nano 7G 16 ГБ">
+                                    </div>
+                                    <div class="titleProduct">
+                                        <a href="#">Apple iPod nano 7G 16 ГБ Blue</a>
+                                    </div>
+                                </div>
+                                <div class="charactProduct">
+                                    <div>
+                                        <p>Артикул</p>
+                                        <p class="rightFloat">42787825</p>
+                                    </div>
+                                    <div>
+                                        <p>Опция</p>
+                                        <p class="rightFloat">включена</p>
+                                    </div>
+                                    <div>
+                                        <p>Цвет</p>
+                                        <p class="rightFloat">серебристый</p>
+                                    </div>
+                                    <div>
+                                        <p>Размер</p>
+                                        <p class="rightFloat">1280*1245*90</p>
+                                    </div>
+                                    <div>
+                                        <p>Вес</p>
+                                        <p class="rightFloat">9 кг</p>
+                                    </div>
+                                </div>
+                                <p class="gradient"></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="innerProduct">
+                                <div class="headProduct">
+                                    <div class="photoProduct">
+                                        <img src="img/products/airport.jpg" alt="Роутер Wi-Fi Apple AirPort">
+                                    </div>
+                                    <div class="titleProduct">
+                                        <a href="#">Роутер Wi-Fi Apple AirPort</a>
+                                    </div>
+                                </div>
+                                <div class="charactProduct">
+                                    <div>
+                                        <p>Артикул</p>
+                                        <p class="rightFloat">42787825</p>
+                                    </div>
+                                    <div>
+                                        <p>Опция</p>
+                                        <p class="rightFloat">включена</p>
+                                    </div>
+                                    <div>
+                                        <p>Цвет</p>
+                                        <p class="rightFloat">серебристый</p>
+                                    </div>
+                                    <div>
+                                        <p>Размер</p>
+                                        <p class="rightFloat">1280*1245*90</p>
+                                    </div>
+                                    <div>
+                                        <p>Вес</p>
+                                        <p class="rightFloat">9 кг</p>
+                                    </div>
+                                </div>
+                                <p class="gradient"></p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
             </div>
         </div>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <footer>
+            <div class="wrap">
+                <div class="wrapFooter">
+                    <div class="leftCol">
+                        <a href="/"><img src="img/logoFooter.png" alt="to Main"></a>
+                    </div>
+                    <div class="footerMenus">
+                        <ul>
+                            <li>О магазине</li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Наши цены</a></li>
+                            <li><a href="#">Наши скидки</a></li>
+                            <li><a href="#">Акции</a></li>
+                        </ul>
+                        <ul>
+                            <li>Каталог</li>
+                            <li><a href="#">Смартфоны</a></li>
+                            <li><a href="#">Планшеты</a></li>
+                            <li><a href="#">Компьютеры</a></li>
+                            <li><a href="#">Аксессуары</a></li>
+                        </ul>
+                        <ul>
+                            <li>Контакты</li>
+                            <li><a href="#">Телефоны</a></li>
+                            <li><a href="#">Адреса</a></li>
+                            <li><a href="#">Карта проезда</a></li>
+                            <li><a href="#">Обратная связь</a></li>
+                        </ul>
+                    </div>
+                    <div class="counterBlock">
+                        <div class="appStore">
+                            <a href="#">apple</a><a href="#" class="android">android</a>
+                        </div>
+                        <ul class="socBtn">
+                            <li><a href="#">vk</a></li>
+                            <li><a href="#" class="facebook">fc</a></li>
+                            <li><a href="#" class="twitter">tw</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
         <script src="js/plugins.js"></script>
+        <!-- the mousewheel plugin - optional to provide mousewheel support -->
+        <script src="js/vendor/jquery.mousewheel.js"></script>
+        <!-- the jScrollPane script -->
+        <script src="js/vendor/jquery.jscrollpane.min.js"></script>
         <script src="js/main.js"></script>
+        <!--[if lte IE 9]><script src="js/vendor/placeholder.js"></script><![endif]-->
+        <!--[if lte IE 9]>
+            <script>
+                $(function () {
+                    $('input, textarea').placeholder();
+                });
+            </script>
+        <![endif]-->
     </body>
 </html>

@@ -39,15 +39,17 @@ body{
     font-family: 'elektra_light_proregular';
     font-size: 1em;
     color:@textColor;
+    padding-top: 38px;
 }
 .wrap{
 	width: 1000px;
-	margin: 38px auto 0;
+	margin: 0 auto;
 	.clearFloat
 }
 // Left col
 aside{
 	.twoFloatBlocks(230px);
+	margin-bottom: 70px;
 	.logo{
 		margin-bottom: 15px;
 	}
@@ -87,27 +89,30 @@ aside{
 			}
 		}
 		.wrapSelect{
-			margin:-7px 0 18px;
+			margin:-7px 0 21px;
+			.clearFloat;
 			label{
 				font-size: 14px;
+				top: 9px;
+				position: relative;
 			}
-			select{
-				width: 70px;
+			input{
+				width: 19px;
 			    border: none;
 			    height: 22px;
 			    line-height: 22px;
 			    position: relative;
 			    background: none;
-			    z-index: 100;
 			    font-size: 12px;
 			    color:@textColor;
 			    font-family: 'elektra_light_proregular';
+			    padding-left: 5px;
+			    outline: none;
 			}
 			.selectOuter {
 			    border: 1px solid #dae1eb;
 			    background: #fff;
 			    width: 49px;
-			    overflow: hidden;
 			    display: inline-block;
 			    position: relative;
 			    top: 7px;
@@ -122,6 +127,42 @@ aside{
 			    top: 0;
 			    bottom: 0;
 			    z-index: 50;
+			    cursor: pointer;
+			}
+			.hideInput{
+				width: 24px;
+				height: 24px;
+				position: absolute;
+				top:0;
+				left: 0;
+			}
+			ul{
+				margin: 0;
+				padding:0;
+				list-style-type: none; 
+				padding-top: 5px;
+				position: absolute;
+				left: -1000px;
+				border: 1px solid #dae1eb;
+			    background: #fff;
+			    width: 100%;
+			    z-index: 1000;
+			    height: 204px;
+			    overflow: auto;
+				li{
+					a{
+						text-decoration: none;
+						color: #5c7b98;
+						display: block;
+						line-height: 20px;
+						padding-left: 6px;
+						font-size: 12px;
+						.transLink(background);
+						&:hover{
+							background: #eaeaea;
+						}
+					}
+				}
 			}
 		}
 		textarea{
@@ -163,29 +204,365 @@ aside{
 		}
 	}
 	.picsBlock{
+		margin-bottom: 20px;
+		.clearFloat;
 		ul{
 			list-style: none;
 			padding: 0;
-			margin: 0;
+			margin: 0 0 0 -10px;
 			li{
 				width: 70px;
 				height: 70px;
 				float: left;
 				margin:0 0 10px 10px;
-				&:nth-child(3n+1){
-					clear: left;
-					margin-left: 0;
+				a{
+					img{
+					.transLink(opacity);
+				}
+					&:hover img{
+						opacity: 0.5;
+						filter:alpha(opacity=50);
+					}
 				}
 			}
+		}
+	}
+	.contactBlock{
+		background: @greyBg;
+		padding: 4px 16px 2px 23px;
+		font-size: 14px;
+		line-height: 20px;
+		div{
+			background: url('@{img-link}/spriteContact.jpg') left 12px no-repeat;
+			padding: 13px 0;
+		}
+		.address{
+			padding-left: 20px;
+			padding-bottom: 9px;
+		}
+		.telefon{
+			background-position: 20px -78px;
+			padding-top: 5px;
+			padding-left: 42px;
 		}
 	}
 }
 //Content col
 .contentCol{
 	.twoFloatBlocks(740px);
+	margin-bottom: 18px;
 	margin-left: 30px;
 	.slider{
-		background: grey;
 		height: 300px;
+		margin-bottom: 50px;
+		overflow: hidden;
+		position: relative;
+		.sliderWrap{
+			width: 9999px;
+			.slide{
+				position: relative;
+				float: left;
+				width: 740px;
+				.legend{
+					position: absolute;
+					width: 100%;
+					bottom: 0;
+					background: #000;
+					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+					background: rgba(0, 0, 0, 0.55);
+					padding: 18px 0 20px 24px;
+					.titleSlide{
+						margin-bottom: 5px;
+						font-size: 18px;
+						a{
+							color:@blueColor;
+						}
+					}
+					p{
+						margin: 0;
+						color: #fff;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+		a.bntSlider{
+			display: block;
+			width: 63px;
+			height: 31px;
+			position: absolute;
+			top:104px;
+			left: 15px;
+			text-align: center;
+			font-size: 17px;
+			color: @textColor;
+			background: #f7f7f7;
+			text-decoration: none;
+			line-height: 34px;
+			font-weight: bold;
+			display: none;
+			&#next{
+				display: block;
+				left: auto;
+				right: 18px;
+			}
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				top:0;
+				left: -7px;
+				width: 7px;
+				height:31px;
+				background: url('@{img-link}/sliderSprite.png') no-repeat 0 0;
+			}
+			&#next:before{
+				background-position: -7px 0;
+				left: auto;
+				right: -7px;
+			}
+			&:hover{
+				background: @blueColor;
+				color:#fff;
+			}
+			&:hover:before{
+				background-position: 0 -34px;
+			}
+			&#next:hover:before{
+				background-position: -7px -34px;
+			}
+		}
+	}
+	section{
+		margin-bottom: 46px;
+		h1{
+			font-family: 'elektra_light_probold';
+			font-size: 25px;
+			margin: 0;
+			text-align: center;
+			border-bottom: 1px solid @textColor;
+			line-height:0px;
+			margin-bottom: 22px;
+			position: relative;
+			z-index:1;
+			span{
+				padding: 0 18px;
+				background: #fff;
+			}
+		}
+		ul{
+			list-style-type: none;
+			padding: 0;
+			margin-left: -25px;
+			.clearFloat;
+			height: 238px;
+			position: relative;
+			z-index:1000;
+			li{
+				width: 228px;
+				height: 232px;
+				float: left;
+				margin-left: 26px;
+				.innerProduct{
+					width: 228px;
+					height: 232px;
+					overflow: hidden;
+					border: 1px solid #dbe2eb;
+					background: #fff;
+					vertical-align: top;
+					position: absolute;
+					.transLink(box-shadow);
+					.headProduct{
+						width: 228px;
+						height: 121px;
+						overflow: hidden;
+						margin-bottom: 15px;
+						display: table-cell;
+						vertical-align: middle;
+						.photoProduct,
+						.titleProduct{
+							overflow: hidden;
+							display: inline-block;
+							width: 43%;
+							vertical-align: middle;
+						}
+						.photoProduct{
+							text-align: center;
+							img{
+								vertical-align: middle;
+								display: inline;
+							}
+						}
+						.titleProduct{
+							width:54%; 
+							font-size: 15px;
+							a{
+								color: @blueColor;
+								.transLink(color);
+								&:hover{
+									color: #613993;
+								}
+							}
+						}
+					}
+					.charactProduct{
+						font-size: 14px;
+						padding: 0 15px 11px;
+						height: 97px;
+						overflow: hidden;
+						div{
+							margin-bottom: 3px;
+							.clearFloat;
+							p{
+								width: 100px;
+								margin: 0;
+								float: left;
+								&.rightFloat{
+									width: 98px;
+									float: right;
+									text-align: left;
+								}
+							}
+						}
+					}
+					&:hover{
+						box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+						overflow: visible;
+						height: auto;
+						.charactProduct{
+							height: 100%;
+						}
+					}
+					.gradient{
+						position: absolute;
+						bottom: 0;
+						height: 16px;
+						width: 100%;
+						margin: 0;
+						/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+						background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+						background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+						background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+					}
+				}
+			}
+			&:hover{
+				z-index: 1001;
+			}
+		}
+	}
+}
+footer{
+	background: url('@{img-link}/footerBg.jpg') repeat;
+	color:#fff;
+	padding: 50px 0;
+	.wrap{
+		.wrapFooter{
+			margin-left: -30px;
+			.clearFloat;
+			.leftCol{
+				width: 200px;
+				display: inline-block;
+				vertical-align: middle;
+				padding-left: 30px;
+			}
+			.footerMenus{
+				margin-left: 30px;
+				width: 485px;
+				display: inline-block;
+				vertical-align: middle;
+				ul{
+					.twoFloatBlocks(130px);
+					padding: 0;
+					list-style: none;
+					margin:7px 0 0 30px;
+					li{
+						line-height: 25px;
+						font-weight: bold;
+						font-size: 15px;
+						a{
+							font-weight: 100;
+							color: #fff;
+							.transLink(all);
+							&:hover{
+								text-decoration: none;
+								color: #dcdbdb;
+							}
+						}
+					}
+				}
+			}
+			.counterBlock{
+				margin-left: 30px;
+				display: inline-block;
+				width: 245px;
+				vertical-align: top;
+				padding-top: 22px;
+				.appStore{ 
+					float: right;
+					margin-bottom: 28px;
+					a{
+						text-indent: -9999px;
+						border-radius: 5px;
+						display: inline-block;
+						background: url('@{img-link}/socialSprite.png') no-repeat left top;
+						width: 90px;
+						height: 32px;
+						margin-left: 4px;
+						outline: none;
+						.transLink(box-shadow);
+						&.android{
+							background-position: -100px top;
+						}
+						&:hover{
+							box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+						}
+						&:active{
+							box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.8);
+						}
+					}
+				}
+				.socBtn{
+					list-style: none;
+					.clearFloat;
+					padding: 0;
+					margin: 0;
+					float: right;
+					margin-right: 28px;
+					li{
+					display: inline-block;
+					margin-right: 13px;
+						a{
+							display: block;
+							text-indent: -9999px;
+							width: 36px;
+							height: 35px;
+							border-radius: 5px;
+							background: url('@{img-link}/socialSprite.png') no-repeat -24px -40px;
+							box-shadow:2px 2px 5px rgba(0, 0, 0, 0.4);
+							position: relative;
+							.transLink(all); 
+							&.facebook{
+								background-position: -77px -40px;
+							}
+							&.twitter{
+								background-position: -127px -40px;
+							}
+							&:hover{
+								box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+							}
+							&:active{
+								box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.7); 
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
