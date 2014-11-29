@@ -57,6 +57,7 @@ aside{
 		background: @greyBg;
 		padding: 14px 10px;
 		margin-bottom: 15px;
+		position: relative;
 		.titleForma{
 			text-align: center;
 			font-size: 25px;
@@ -71,6 +72,7 @@ aside{
 		}
 		.wrapInput{
 			margin-bottom: 13px;
+			position: relative;
 			.clearFloat;
 			label{
 				font-size: 14px;
@@ -86,6 +88,13 @@ aside{
 				font-family: 'elektra_light_proregular';
 				font-size: 12px;
 				color:@textColor;
+			}
+			&.wrapTextarea{
+				margin-bottom: 0;
+			}
+			&.error input,
+			&.error textarea{
+				border:1px solid #f97e76;
 			}
 		}
 		.wrapSelect{
@@ -117,6 +126,9 @@ aside{
 			    position: relative;
 			    top: 7px;
 				margin-left: 7px;
+				&.error{
+					border:1px solid #f97e76;
+				}
 			}
 			.select-button {
 			    background: url('@{img-link}/selectBtn.jpg') center center no-repeat;
@@ -201,6 +213,61 @@ aside{
 				&:hover{
 					background: #bec4cc;
 				}
+		}
+		.formaCall span.error{
+			position: absolute;
+			width: 130px;
+			padding: 5px 0;
+			font-size: 12px;
+			top:50%;
+			margin-top:-12px;
+			right: -142px;
+			text-align: center;
+			color: #fff;
+			background: #f97e76;
+			z-index: 2000;
+			border-radius: 5px;
+			&:before{
+				content:'';
+				width: 0;
+			    height: 0;
+			    border-top: 5px solid transparent;
+			    border-right: 10px solid #f97e76;
+			    border-bottom: 5px solid transparent;
+			    position: absolute;
+			    left: -10px;
+				top: 50%;
+				margin-top: -5px;
+			}
+			&.left{
+				right: auto;
+				left:-142px;
+				&:before{
+					content:'';
+					width: 0;
+				    height: 0;
+				    border-top: 5px solid transparent;
+				    border-right: none;
+				    border-left: 10px solid #f97e76;
+				    border-bottom: 5px solid transparent;
+				    position: absolute;
+				    left: auto;
+				    right: -10px;
+					top: 50%;
+					margin-top: -5px;
+				}
+			}
+		}
+		.answerServ{
+			display: none;
+			margin: 0;
+			position: absolute;
+			top:42px;
+			left: 0;
+			color: #00b9fe;
+			width: 95%;
+			text-align: right;
+			font-size: 12px;
 		}
 	}
 	.picsBlock{
