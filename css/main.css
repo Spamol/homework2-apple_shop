@@ -48,6 +48,7 @@ aside .formaBlock {
   background: #f4f6f9;
   padding: 14px 10px;
   margin-bottom: 15px;
+  position: relative;
 }
 aside .formaBlock .titleForma {
   text-align: center;
@@ -63,6 +64,7 @@ aside .formaBlock textarea::-moz-placeholder {
 }
 aside .formaBlock .wrapInput {
   margin-bottom: 13px;
+  position: relative;
   zoom: 1;
   /* Хак для IE 6 и 7 */
 }
@@ -89,6 +91,22 @@ aside .formaBlock .wrapInput input {
   font-size: 12px;
   color: #5c7b98;
 }
+<<<<<<< HEAD
+=======
+aside .formaBlock .wrapInput.wrapTextarea {
+  margin-bottom: 0;
+}
+>>>>>>> master
+aside .formaBlock .wrapInput.error input,
+aside .formaBlock .wrapInput.error textarea {
+  border: 1px solid #f97e76;
+}
+<<<<<<< HEAD
+aside .formaBlock .wrapInput.wrapTextarea {
+  margin-bottom: 0;
+}
+=======
+>>>>>>> master
 aside .formaBlock .wrapSelect {
   margin: -7px 0 21px;
   zoom: 1;
@@ -128,6 +146,9 @@ aside .formaBlock .wrapSelect .selectOuter {
   position: relative;
   top: 7px;
   margin-left: 7px;
+}
+aside .formaBlock .wrapSelect .selectOuter.error {
+  border: 1px solid #f97e76;
 }
 aside .formaBlock .wrapSelect .select-button {
   background: url('../img/selectBtn.jpg') center center no-repeat;
@@ -213,6 +234,84 @@ aside .formaBlock input[type=reset] {
 aside .formaBlock input[type=reset]:hover {
   background: #bec4cc;
 }
+<<<<<<< HEAD
+aside .formaBlock span.error {
+=======
+aside .formaBlock .formaCall span.error {
+>>>>>>> master
+  position: absolute;
+  width: 130px;
+  padding: 5px 0;
+  font-size: 12px;
+  top: 50%;
+  margin-top: -12px;
+  right: -142px;
+  text-align: center;
+  color: #fff;
+  background: #f97e76;
+  z-index: 2000;
+  border-radius: 5px;
+}
+<<<<<<< HEAD
+aside .formaBlock span.error:before {
+=======
+aside .formaBlock .formaCall span.error:before {
+>>>>>>> master
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 10px solid #f97e76;
+  border-bottom: 5px solid transparent;
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  margin-top: -5px;
+}
+<<<<<<< HEAD
+aside .formaBlock span.error.left {
+  right: auto;
+  left: -142px;
+}
+aside .formaBlock span.error.left:before {
+=======
+aside .formaBlock .formaCall span.error.left {
+  right: auto;
+  left: -142px;
+}
+aside .formaBlock .formaCall span.error.left:before {
+>>>>>>> master
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: none;
+  border-left: 10px solid #f97e76;
+  border-bottom: 5px solid transparent;
+  position: absolute;
+  left: auto;
+  right: -10px;
+  top: 50%;
+  margin-top: -5px;
+}
+aside .formaBlock .answerServ {
+  display: none;
+  margin: 0;
+  position: absolute;
+<<<<<<< HEAD
+  top: 40px;
+=======
+  top: 42px;
+>>>>>>> master
+  left: 0;
+  color: #00b9fe;
+  width: 95%;
+  text-align: right;
+<<<<<<< HEAD
+=======
+  font-size: 12px;
+>>>>>>> master
+}
 aside .picsBlock {
   margin-bottom: 20px;
   zoom: 1;
@@ -262,6 +361,10 @@ aside .contactBlock .telefon {
   background-position: 20px -78px;
   padding-top: 5px;
   padding-left: 42px;
+}
+aside .contactBlock .telefon a {
+  color: #5c7b98;
+  text-decoration: none;
 }
 .contentCol {
   float: left;

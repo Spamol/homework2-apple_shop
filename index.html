@@ -42,14 +42,15 @@
                 <div class="logo"><a href="/"><img src="img/logo.jpg" alt="На главную!"></a></div>
                 <div class="formaBlock">
                     <div class="titleForma">Заказать звонок</div>
+                    <p class="answerServ"></p>
                     <form class="formaCall" action="feedback.php" method="post">
                         <div class="wrapInput">
-                            <label for="name">Ваше имя</label>
-                            <input type="text" name="name" placeholder="Константин">
+                            <label for="nameInput">Ваше имя</label>
+                            <input type="text" name="name" id="nameInput" placeholder="Константин">
                         </div>
                         <div class="wrapInput">
-                            <label for="telefon">Телефон</label>
-                            <input type="text" name="telefon" placeholder="+7 (912) 000-00-00">
+                            <label for="telefonInput">Телефон</label>
+                            <input type="text" name="telefon" id="telefonInput" placeholder="+7 (912) 000-00-00">
                         </div>
                         <div class="wrapSelect">
                             <label for="day">Дата звонка</label>
@@ -113,7 +114,9 @@
                                </div>
                             </div>
                         </div>
-                        <textarea name="comment" placeholder="Комментарий"></textarea>
+                        <div class="wrapInput wrapTextarea">
+                            <textarea name="comment" placeholder="Комментарий"></textarea>
+                        </div>
                         <input type="submit" id="submitForm" value="Отправить">
                         <input type="reset" value="Очистить">
                     </form>
@@ -133,7 +136,7 @@
                 </div>
                 <div class="contactBlock">
                     <div class="address">г. Москва, ул. Новая 246, офис 214.</div>
-                    <div class="telefon">+7(921) 322-12-32</div>
+                    <div class="telefon"><a href="tel:+79213221232">+7(921) 322-12-32</a></div>
                 </div>
             </aside>
             <div class="contentCol">
