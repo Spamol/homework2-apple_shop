@@ -44,7 +44,8 @@
 		return false;
 	},
 	// работаем с формой
-	formSend: function(){
+	formSend: function(e){
+		e.preventDefault();
 		var form = $(this);
 		if (!app.validForm(form)) return false; 
 		jQuery.ajax({
@@ -61,15 +62,27 @@
 	     });
 		return false;
 	},
-	validForm: function(){
+	validForm: function(form){
 		var elements = form.find('input, textarea'),
 			valid = true;
 
 		$.each(elements, function(index, val) {
 	        var element = $(val),
-	            val = element.val();        
+	            val = element.val();
+	            console.log(form.find("span.error"));
+	            if(element[0]['tagName'] == "TEXTAREA"){
+					element.removeClass('error');
+					return false;
+				}
+	            element.parent().removeClass('error');        
 			if(val.length === 0){
-				element.addClass('error');         
+				if(element[0]['tagName'] == "TEXTAREA"){
+					element.addClass('error');
+					element.after("<span class='error'>Заполнить поле</span>");
+					return false;
+				}
+				element.parent().addClass('error');
+				element.parent().append("<span class='error'>Заполнить поле</span>");      
 	    		valid = false;
 		    }
 
