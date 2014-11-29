@@ -17,7 +17,7 @@
   		$(document).on('click', app.closeSelect); //клик по документу
   		$(".select-button").on('click', app.selectIn); //открываем/закрываем селект по нажатию кнопки
   		$(".scroll-pane").find("a").on('click', app.valSelect); //клик по значению на псевдо-селект
-  		$(".formaCall").on('submit', app.formSend); // отправляем форму
+  		$(".formaCall").on({'keyup':app.removeError,'change':app.removeError,'submit':app.formSend,'reset':app.resetForm}); //события формы
   	},
   	// закрываем селект при клике в любое место странице, кроме скролла
   	closeSelect: function(e){
@@ -40,6 +40,7 @@
 	// берем значение из псевдо-селекта, передаем в наш инпут
 	valSelect: function(){
 		$(this).parents(".selectOuter").find("input").val($(this).text());
+		$(this).trigger("change");
 		$(this).parents("ul").slideUp(200);
 		return false;
 	},
@@ -49,40 +50,45 @@
 		var form = $(this);
 		if (!app.validForm(form)) return false; 
 		jQuery.ajax({
-	            url:     "feedback.php", //Адрес скрипта
-	            type:     "POST", //Тип запроса
-	            dataType: "html", //Тип данных
-	            data: jQuery(".formaCall").serialize(), 
-	            success: function(response) { //Если все нормально
-	            console.log(response);
-	        },
+            url:     "feedback.php", //Адрес скрипта
+            type:     "POST", //Тип запроса
+            dataType: "html", //Тип данных
+            data: jQuery(".formaCall").serialize(), 
+            success: function(response) { //Если все нормально
+        		$(".answerServ").text(response).fadeIn();
+            	$(".formaCall").trigger("reset");
+            	setTimeout(function(){
+            		$(".answerServ").text(response).fadeOut();
+            	}, 2000);
+        	},
 	        error: function(response) { //Если ошибка
-	        	console.log("Ошибка при отправке формы");
+	        	$(".answerServ").text("Произошла ошибка на сервере").fadeIn();
 	        }
 	     });
 		return false;
 	},
+	removeError: function(){
+		$("span.error").remove();
+		app.validForm($(this));
+	},
+	resetForm: function(){
+		$("span.error").remove();
+		$(".wrapInput.error").add(".selectOuter.error").removeClass("error");
+	},
 	validForm: function(form){
-		var elements = form.find('input, textarea'),
+		var elements = form.find('input, textarea').not('input[type="submit"],input[type="reset"]'),
 			valid = true;
-
 		$.each(elements, function(index, val) {
 	        var element = $(val),
 	            val = element.val();
-	            console.log(form.find("span.error"));
-	            if(element[0]['tagName'] == "TEXTAREA"){
-					element.removeClass('error');
-					return false;
-				}
 	            element.parent().removeClass('error');        
 			if(val.length === 0){
-				if(element[0]['tagName'] == "TEXTAREA"){
-					element.addClass('error');
-					element.after("<span class='error'>Заполнить поле</span>");
-					return false;
-				}
 				element.parent().addClass('error');
-				element.parent().append("<span class='error'>Заполнить поле</span>");      
+				if(element[0].name == "day"){
+					element.parent().append("<span class='error left'>Заполните поле</span>"); 
+				}else{
+					element.parent().append("<span class='error'>"+"Заполните "+(element.parent().find("label").text() || " поле")+"</span>"); 
+				}    
 	    		valid = false;
 		    }
 

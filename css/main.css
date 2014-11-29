@@ -328,6 +328,10 @@ aside .contactBlock .telefon {
   padding-top: 5px;
   padding-left: 42px;
 }
+aside .contactBlock .telefon a {
+  color: #5c7b98;
+  text-decoration: none;
+}
 .contentCol {
   float: left;
   width: 740px;
